@@ -24,7 +24,7 @@ namespace RedefinirOperador
         public static Boolean operator ==(Persona a, Persona b) { return (a.Nombre.Equals(b.Nombre)); }
         
         //Corrección de Pedro a la redefinición del método Equals
-        public override void Equals(Object ob){
+        public override bool Equals(Object ob){
             var persona = ob as Person;
             if(persona==null) return false;
             return persona.name == this.name;
